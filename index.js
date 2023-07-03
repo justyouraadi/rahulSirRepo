@@ -15,8 +15,8 @@ const server = http.createServer((req, res) => {
           return;
         }
         else{
-            res.writeHead(200, { 'Content-Type': 'text/html' });
-            const modifiedContent = data.replace('<%= name %>', 'John Doe');
+            res.writeHead(200, "utf-8",{ 'Content-Type': 'text/html' });
+            const modifiedContent = data.replace('hello', 'John Doe');
             res.end(modifiedContent);
         }
        
